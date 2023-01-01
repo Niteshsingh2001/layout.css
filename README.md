@@ -1,5 +1,3 @@
-# layout.css
-
 # Getting Started 
 
 **horizontal\_view** = \[ left, center, right, space-between, space-around \]  
