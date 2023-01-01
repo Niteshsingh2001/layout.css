@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Playground</title>
+    <link rel="stylesheet" href="layout.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            background: linear-gradient(145deg, #e6e6e6, #ffffff);
+            box-shadow: inset 5px 5px 10px #d9d9d9,
+                inset -5px -5px 10px #ffffff;
+        }
+
+        .btn_selected {
+            color: white;
+            background: linear-gradient(145deg, #559dfb, #5473b8);
+            box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+        }
+
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .view_btn:focus {
+            outline: none;
+        }
+
+        .view_btn {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+
+        }
+
+        .playground {
+            background-color: #404040;
+            height:100vh;
+        }
+
+        .codespace {
+            background-color: #111111;
+            color: white;
+            padding: 10px;
+
+        }
+
+        .list {
+            background-color: white;
+            height: 100px;
+            width: 100px;
+            border-radius: 5px;
+            margin: 5px;
+            font-size: 4rem;
+        }
+
+        .copy {
+            background: none;
+            border: none;
+        }
+
+        .copy_btn {
+            fill: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chooser -->
+
+    <div class="row r-center">
+        <button class="btn btn_selected">ROW</button>
+        <button class="btn btn_not_selected">COL</button>
+    </div>
+
+    <div class="row r-space-around r-center" style="background-color: #d6d6d6;">
+        <div class="r-center">
+            <button class="view_btn horizontal">Left</button>
+            <button class="view_btn horizontal">Center</button>
+            <button class="view_btn horizontal">Right</button>
+            <button class="view_btn horizontal">Space Between</button>
+            <button class="view_btn horizontal">Space Around</button>
+        </div>
+
+        <div class="r-center" id="vertical">
+            <button class="view_btn vertical">Top</button>
+            <button class="view_btn vertical">Center</button>
+            <button class="view_btn vertical">Bottom</button>
+            <button class="view_btn vertical " style="display: none;">Space Between</button>
+            <button class="view_btn vertical " style="display: none;">Space Around</button>
+        </div>
+    </div>
+
+    <!-- Playground -->
+
+    <div class="playground row">
+        <h1 class="list col c-center">🙏</h1>
+        <h1 class="list col c-center">👍</h1>
+        <h1 class="list col c-center">🔥</h1>
+    </div>
+    <div class="codespace row r-space-between">
+
+        <div class="code">
+
+        </div>
+        <button class="copy">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="copy_btn"
+                viewBox="0 0 16 16">
+                <path
+                    d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path
+                    d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+            </svg>
+        </button>
+    </div>
+
+
+
+</body>
+
+<script>
+    console.log("%cmade with layout.css%cby @nitesh_singh", "margin:2px; padding : 5px; border-radius : 5px; background-color : #404040; color : white; font-size : 1.2rem; font-weight : 600;", " margin:2px; padding : 5px; border-radius : 5px; background-color : #c94b4b; color : white; font-size : 1.2rem; font-weight : 600;");
+    // Selctors
+
+    let flag = "ROW";
+    let tab_btns = document.querySelectorAll(".btn");
+    let horizontal = document.querySelectorAll(".horizontal");
+    let vertical = document.querySelectorAll(".vertical");
+    let codespace = document.querySelector(".code");
+    let playground = document.querySelector(".playground");
+
+    // Tabs switch between row and column
+    tab_btns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+
+            if (e.target.innerText == "ROW") {
+                playground.removeAttribute = "class";
+                playground.className = "playground row";
+                tab_btns[1].classList.remove("btn_selected")
+                btn.classList.add("btn_selected");
+                flag = "ROW";
+                horizontal[4].style.display = "";
+                horizontal[3].style.display = "";
+                document.getElementById("vertical").children[3].style.display = "none";
+                document.getElementById("vertical").children[4].style.display = "none";
+
+            }
+
+            else {
+                playground.removeAttribute = "class";
+                playground.className = "playground col";
+                btn.classList.add("btn_selected");
+                tab_btns[0].classList.remove("btn_selected");
+                flag = "COL";
+                horizontal[4].style.display = "none";
+                horizontal[3].style.display = "none";
+                document.getElementById("vertical").children[3].style.display = "";
+                document.getElementById("vertical").children[4].style.display = "";
+
+
+            }
+        });
+    });
+
+
+    // Directions Horizontal
+
+    horizontal.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            if (flag == "ROW") {
+                playground.removeAttribute = "class";
+                playground.className = "playground row"
+                switch (e.target.innerText) {
+                    case "Left":
+                        console.log(e.target.innerText);
+                        playground.classList.add("r-left");
+                        playground.classList.remove("r-right");
+                        playground.classList.remove("r-center");
+                        playground.classList.remove("r-space-around");
+                        playground.classList.remove("r-space-between");
+                        break;
+                    case "Right":
+                        console.log(e.target.innerText);
+                        playground.classList.remove("r-left");
+                        playground.classList.add("r-right");
+                        playground.classList.remove("r-center");
+                        playground.classList.remove("r-space-around");
+                        playground.classList.remove("r-space-between");
+                        break;
+                    case "Center":
+                        console.log(e.target.innerText);
+                        playground.classList.add("r-center");
+                        playground.classList.remove("r-left");
+                        playground.classList.remove("r-right");
+                        playground.classList.remove("r-space-around");
+                        playground.classList.remove("r-space-between");
+                        break;
+                    case "Space Between":
+                        console.log(e.target.innerText);
+                        playground.classList.add("r-space-between");
+                        playground.classList.remove("r-left");
+                        playground.classList.remove("r-right");
+                        playground.classList.remove("r-center");
+                        playground.classList.remove("r-space-around");
+                        break;
+                    case "Space Around":
+                        console.log(e.target.innerText);
+                        playground.classList.add("r-space-around");
+                        playground.classList.remove("r-left");
+                        playground.classList.remove("r-right");
+                        playground.classList.remove("r-center");
+                        playground.classList.remove("r-space-between");
+                        break;
+
+                }
+            }
+
+            else if (flag == "COL") {
+                playground.removeAttribute = "class";
+                playground.className = "playground col"
+
+                switch (e.target.innerText) {
+                    case "Left":
+                        console.log(e.target.innerText);
+                        playground.classList.add("c-left");
+                        playground.classList.remove("c-right");
+                        playground.classList.remove("c-center");
+                        playground.classList.remove("c-space-around");
+                        playground.classList.remove("c-space-between");
+                        break;
+                    case "Right":
+                        console.log(e.target.innerText);
+                        playground.classList.remove("c-left");
+                        playground.classList.add("c-right");
+                        playground.classList.remove("c-center");
+                        playground.classList.remove("c-space-around");
+                        playground.classList.remove("c-space-between");
+                        break;
+                    case "Center":
+                        console.log(e.target.innerText);
+                        playground.classList.add("c-center");
+                        playground.classList.remove("c-left");
+                        playground.classList.remove("c-right");
+                        playground.classList.remove("c-space-around");
+                        playground.classList.remove("c-space-between");
+                        break;
+                }
+            }
+        }
+        )
+    });
+    // Directions Vertical
+
+    vertical.forEach((btn) => {
+
+        btn.addEventListener("click", (e) => {
+            if (flag == "ROW") {
+                switch (e.target.innerText) {
+                    case "Top":
+                        playground.classList.add("r-top");
+                        playground.classList.remove("r-bottom");
+                        playground.classList.remove("r-v-center");
+                        break;
+                    case "Bottom":
+                        playground.classList.remove("r-top");
+                        playground.classList.add("r-bottom");
+                        playground.classList.remove("r-v-center");
+                        break;
+                    case "Center":
+                        playground.classList.remove("r-top");
+                        playground.classList.remove("r-bottom");
+                        playground.classList.add("r-v-center");
+                        break;
+                }
+            }
+
+            else if (flag == "COL") {
+                switch (e.target.innerText) {
+                    case "Top":
+                        playground.classList.add("c-top");
+                        playground.classList.remove("c-bottom");
+                        playground.classList.remove("c-v-center");
+                        playground.classList.remove("c-space-between");
+                        playground.classList.remove("c-space-around");
+                        break;
+                    case "Bottom":
+                        playground.classList.remove("c-top");
+                        playground.classList.add("c-bottom");
+                        playground.classList.remove("c-v-center");
+                        playground.classList.remove("c-space-between");
+                        playground.classList.remove("c-space-around");
+                        break;
+                    case "Center":
+                        playground.classList.remove("c-top");
+                        playground.classList.remove("c-bottom");
+                        playground.classList.add("c-v-center");
+                        playground.classList.remove("c-space-between");
+                        playground.classList.remove("c-space-around");
+                        break;
+                    case "Space Between":
+                        console.log(e.target.innerText);
+                        playground.classList.remove("c-top");
+                        playground.classList.remove("c-bottom");
+                        playground.classList.remove("c-v-center");
+                        playground.classList.add("c-space-between");
+                        playground.classList.remove("c-space-around");
+                        break;
+                    case "Space Around":
+                        console.log(e.target.innerText);
+                        playground.classList.remove("c-top");
+                        playground.classList.remove("c-bottom");
+                        playground.classList.remove("c-v-center");
+                        playground.classList.remove("c-space-between");
+                        playground.classList.add("c-space-around");
+                        break;
+
+                }
+            }
+        })
+    })
+
+    // Show Code 
+    codespace.innerText = `${playground.classList.value.replace("playground", "")}`
+
+    tab_btns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            codespace.innerText = `${playground.classList.value.replace("playground", "")}`
+        })
+    })
+
+    horizontal.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            codespace.innerText = `${playground.classList.value.replace("playground", "")}`
+        })
+    })
+
+    vertical.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            codespace.innerText = `${playground.classList.value.replace("playground", "")}`
+        })
+    })
+
+    let copy_btn = document.querySelector(".copy")
+    copy_btn.style.fill = "green";
+
+    function copyTextToClipboard(text) {
+        if (!navigator.clipboard) {
+            fallbackCopyTextToClipboard(text);
+            return;
+        }
+        navigator.clipboard.writeText(text).then(function () {
+
+            document.querySelector(".copy_btn").style.fill = "green";
+            setTimeout(() => {
+                document.querySelector(".copy_btn").style.fill = "white";
+            }, 1000)
+
+        }, function (err) {
+            document.querySelector(".copy_btn").style.fill = "red";
+            setTimeout(() => {
+                document.querySelector(".copy_btn").style.fill = "white";
+            }, 1000)
+
+        });
+    }
+
+    copy_btn.addEventListener("click", (e) => {
+        copyTextToClipboard(codespace.innerText)
+    })
+
+
+</script>
+
+</html>
