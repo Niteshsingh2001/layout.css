@@ -2,89 +2,129 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>layout.css</title>
-    <link rel="stylesheet" href="outfit.css">
-    <link rel="stylesheet" href="layout.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Make Effortless CSS Layout Design">
+    <meta name="keywords"
+        content="HTML, CSS, JavaScript, css layouts , Layout.css, css library, css framework, css layout framework">
+    <meta name="author" content="Nitesh Singh">
+
+    <title>Layout.css</title>
+
+    <link rel="icon" type="image/x-icon" href="res/images/favicon.ico">
+    <link href="res/css/outfit.css" rel="stylesheet" type="text/css" />
+    <link href="res/css/layout.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 
 <body>
-    <nav class="row r-center r-v-center">
-        <div class="logo">layout.css</div>
-    </nav>
+    <main class="">
 
-    <div class="hero-section col c-center c-v-center">
-        <div class="title">Make Responsive Layout <u>Easily</u></div>
-        <a href="playground.html" class="btn">Try Now</a>
-    </div>
+        <div class="c c-center c-v-center">
+            <!-- NavBar -->
+
+            <header>
+                <nav class="r text r-center r-space-between shadow nav">
+                    <div class="logo r r-center r-v-center ">
+                        <div class="logopic"></div>
+                        <span class="title">Layout.css</span>
+                    </div>
+
+                    <a href="" class="btn">Download</a>
+                </nav>
+            </header>
+
+            <!-- Hero Section -->
+            <section class="hero text c c-center c-v-center shadow">
+
+                <h1>Make Effortless CSS Layout Design</h1>
+                <p>Simplifying Responsive Layout Design for Beginners</p>
+                <a href="" class="btn">Try Now </a>
+            </section>
+
+            <!-- Features  -->
+            <section class="sec text c c-center c-v-center">
+                <h2>Why use Layout.css?</h2>
+                <div class="feature r r-center r-v-center ">
 
 
-    <div class="row r-center r-v-center">
-        <div class="docs col">
-            <div class="heading row r-center">Getting Started</div>
-            
-            <p><a href="https://niteshsingh2001.github.io/layout.css/playground.html">Playground</a> | <a href="https://niteshsingh2001.github.io/layout.css/layout.css">CSS File</a> | <a href="https://niteshsingh2001.github.io/layout.css/">Site</a></p>
-            <p>Link CSS File  to HTML File</p>
-            <h1 id="documentation">Documentation</h1>
-            <div>
+                    <div class="card c c-center c-v-center">
+                        <img class="cont shadow icon" src="/res/images/Developer Mode Icon.svg" alt="icon">
+                        <h5>Intuitive Syntax</h5>
+                    </div>
 
-                <b>horizontal_view</b> = [ left, center, right, space-between, space-around ]
-                <br><br>
-                <b>vertical_view</b> = [ top, bottom, v-center, space-between, space-around ]
-                <br>
-                <br>
-                <br>
+                    <div class="card c c-center c-v-center">
+                        <img class="cont shadow icon1" src="/res/images/Swipe Right Gesture Icon.svg" alt="icon">
+                        <h5>Effortless Implementation</h5>
+                    </div>
 
-                <b>Syntax : </b>
-                <br>
-                <br>
+                    <div class="card c c-center c-v-center">
+                        <img class="cont shadow icon" src="/res/images/Smartphone Tablet Icon.svg" alt="icon">
+                        <h5>Responsive Design </h5>
+                    </div>
 
-                <div class="row r-center r-v-center">
-                    <p style="font-size: 1rem;">
-                        <span class="syntax">row/column</span>
-                        <span class="syntax">r/c-horizontal_view</span>
-                        <span class="syntax">r/c-vertical_view</span>
-
-                    </p>
                 </div>
-                <br>
-                <b>Example Row :</b>
-                <div class="syntax">
-                    <br><br>
-                    <pre> &lt;div class="row r-center r-bottom"&gt; Code Here &lt;/div&gt;</pre> <br><br>
+            </section>
+
+            <!-- Getting Started -->
+            <section class="sec text">
+                <h2>Getting Started</h2>
+                <div class="links">
+                    <a href="http://">Playground |</a>
+                    <a href="http://">CSS File |</a>
+                    <a href="http://">Site</a>
                 </div>
-                <b>Example Col :</b>
-                <div class="syntax">
-                    <br><br>
-                    <pre> &lt;div class="column c-left c-top"&gt; Code Here &lt;/div&gt;</pre> <br><br>
+                <p>Link CSS File to HTML File</p>
+            </section>
+
+            <!-- Documentation -->
+            <section class="sec c c-center c-v-center">
+
+                <h2>Documentation</h2>
+
+                <div class="text-left overview">
+                    <p> r = row , c = column</p>
+                    <p> horizontal_view = [ left, center, right, space-between, space-around ]</p>
+                    <p> vertical_view = [ top, bottom, v-center, space-between, space-around ]</p>
                 </div>
 
+                <div class="block">
+                    <h4 class="text-left">Syntax</h4>
+                    <div class="text-left syntax  c c-center">
+                        <code
+                            class="code"> &#x3C;div class &#x22;<span class="red-text"> r/c r/c-horizontal_view r/c-vertical_view </span>&#x22;&#x3E; Code Here &#x3C;/div&#x3E;</code>
+                    </div>
 
+                </div>
+                <div class="block">
+                    <h4 class="text-left">Example</h4>
+                    <div class="text-left syntax c c-center">
+                        <code
+                            class="code codeclass2"> &#x3C;div class &#x22;<span class="red-text"> r r-center r-top </span>&#x22;&#x3E; Code  &#x3C;/div&#x3E;</code>
+                        <code
+                            class="code codeclass2"> &#x3C;div class &#x22;<span class="red-text"> c c-center c-top </span>&#x22;&#x3E; Code  &#x3C;/div&#x3E;</code>
+                    </div>
 
-            </div>
+                </div>
+
+            </section>
+
+            <footer class="sec foo">
+                <p class="text-sm">By <a href="http://">Nitesh Singh</a> </p>
+                <p class="text-med">Made with<span class="red-text"> Love</span></p>
+                <p class="text-sm">Not With HTML CSS JavaScript</span>
+            </footer>
         </div>
-
-    </div>
-
-    <div class="save row r-right r-space-between">
-        <div class=" row r-center r-v-center">made with layout.css</div>
-        <a href="layout.css" download>
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-download"
-                viewBox="0 0 16 16">
-                <path
-                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
-                <path
-                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
-            </svg>
-        </a>
-    </div>
-
+    </main>
 </body>
 
-<script>
-    console.log("%cmade with layout.css%cby @nitesh_singh", "margin:2px; padding : 5px; border-radius : 5px; background-color : #404040; color : white; font-size : 1.2rem; font-weight : 600;", " margin:2px; padding : 5px; border-radius : 5px; background-color : #c94b4b; color : white; font-size : 1.2rem; font-weight : 600;");
+
+
+
+<script src="res/js/magic.js">
 </script>
 
 </html>
