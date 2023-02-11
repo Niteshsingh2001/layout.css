@@ -1,7 +1,7 @@
 
 # Getting Started 
 
-[Playground](https://niteshsingh2001.github.io/layout.css/playground.html) | [CSS File](https://niteshsingh2001.github.io/layout.css/layout.css) | [Site](https://niteshsingh2001.github.io/layout.css/)
+[Playground](https://niteshsingh2001.github.io/layout.css/res/pages/playground.html) | [CSS File](https://niteshsingh2001.github.io/layout.css/res/css/layout.css) | [Site](https://niteshsingh2001.github.io/layout.css/)
 
 Link CSS File  to HTML File
 
