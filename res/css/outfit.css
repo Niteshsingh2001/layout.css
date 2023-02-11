@@ -1,0 +1,251 @@
+:root {
+    /* Color Schema */
+    --btn: #FC4850;
+    --link: #EFC2C2;
+    --txt: #5E5E5E;
+    --bg2: #5E5E5E;
+    --bg1: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: var(--txt);
+
+
+}
+
+.main {
+    background-color: #EFC2C2;
+}
+
+
+.text {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.shadow {
+    box-shadow: 2px 2px 4px rgba(146, 146, 146, 0.349);
+    border-radius: 8px;
+}
+
+/* NavBar */
+.nav {
+    width: 70vw;
+    height: 8vh;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.logo {}
+
+.logopic {
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    background-image: url("/res/images/logo.png");
+    background-position: "center";
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.title {
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: larger;
+
+}
+
+.btn {
+    border: none;
+    background-color: var(--btn);
+    color: var(--bg1);
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sec {
+    margin-top: 20px;
+    width: 70vw;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/* Hero Section */
+.hero {
+    height: 30vh;
+    margin-top: 20px;
+    width: 70vw;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.hero h1 {
+    font-size: 200%;
+    font-weight: 600;
+
+}
+
+.hero p {
+    font-size: 100%;
+    padding: 10px;
+
+}
+
+.hero a {
+    margin-top: 50px;
+    padding: 10px;
+}
+
+/* Features */
+
+
+.feature {
+    width: 100%;
+    margin: 10px;
+
+}
+
+.card {
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.cont {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.icon {
+    height: 100px;
+    width: 100px;
+    padding: 25%;
+}
+
+.icon1 {
+    height: 100px;
+    width: 100px;
+    padding: 20%;
+}
+
+/* Getting Started*/
+.links {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.links a {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: var(--link);
+}
+
+/* documents */
+.block {
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.overview {
+    width: 50%;
+}
+
+.overview p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.syntax {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
+}
+
+.red-text {
+    color: var(--btn);
+}
+
+.code {
+    background-color: #acacaca9;
+    color: black;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    border-radius: 4px;
+
+}
+
+.codeclass2 {
+    margin-top: 10px;
+}
+
+/* Footer */
+.foo {
+    text-align: center;
+}
+
+.foo p {
+    padding: 2px;
+}
+
+.text-sm {
+    font-size: smaller;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .nav {
+        width: 95vw;
+    }
+
+    .hero {
+        width: 95vw;
+    }
+
+    .sec {
+        width: 95vw;
+    }
+
+    .feature {
+        width: 60%;
+
+    }
+
+    .icon {
+        height: 50px;
+        width: 50px;
+        padding: 15%;
+    }
+
+    .icon1 {
+        height: 50px;
+        width: 50px;
+        padding: 10%;
+    }
+
+    .block {
+        width: 100%;
+
+    }
+
+    .overview {
+        width: 100%;
+    }
+}
