@@ -1,0 +1,1 @@
+console.log("%cmade with layout.css%cby @nitesh_singh", "margin:2px; padding : 5px; border-radius : 5px; background-color : #404040; color : white; font-size : 1.2rem; font-weight : 600;", " margin:2px; padding : 5px; border-radius : 5px; background-color : #c94b4b; color : white; font-size : 1.2rem; font-weight : 600;");
