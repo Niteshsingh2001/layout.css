@@ -7,6 +7,8 @@ Link CSS File  to HTML File
 
 # Documentation
 
+r = row , c = column
+
 **horizontal\_view** = \[ left, center, right, space-between, space-around \]  
   
 **vertical\_view** = \[ top, bottom, v-center, space-between, space-around \]
@@ -22,7 +24,7 @@ Link CSS File  to HTML File
   
   
 
- ` <div class="row r-center r-bottom"> Code Here </div> `
+ ` <div class="r r-center r-bottom"> Code Here </div> `
 
   
   
@@ -32,7 +34,7 @@ Link CSS File  to HTML File
   
   
 
-` <div class="column c-left c-top"> Code Here </div> `
+` <div class="c c-left c-top"> Code Here </div> `
 
   
   
