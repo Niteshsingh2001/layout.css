@@ -119,9 +119,9 @@
     <!-- Playground -->
 
     <div class="playground row">
-        <h1 class="list col c-center">🙏</h1>
-        <h1 class="list col c-center">👍</h1>
-        <h1 class="list col c-center">🔥</h1>
+        <h1 class="list c c-center">🙏</h1>
+        <h1 class="list c c-center">👍</h1>
+        <h1 class="list c c-center">🔥</h1>
     </div>
     <div class="codespace row r-space-between">
 
@@ -147,7 +147,7 @@
     console.log("%cmade with layout.css%cby @nitesh_singh", "margin:2px; padding : 5px; border-radius : 5px; background-color : #404040; color : white; font-size : 1.2rem; font-weight : 600;", " margin:2px; padding : 5px; border-radius : 5px; background-color : #c94b4b; color : white; font-size : 1.2rem; font-weight : 600;");
     // Selctors
 
-    let flag = "r";
+    let flag = "ROW";
     let tab_btns = document.querySelectorAll(".btn");
     let horizontal = document.querySelectorAll(".horizontal");
     let vertical = document.querySelectorAll(".vertical");
@@ -173,7 +173,7 @@
 
             else {
                 playground.removeAttribute = "class";
-                playground.className = "playground col";
+                playground.className = "playground c";
                 btn.classList.add("btn_selected");
                 tab_btns[0].classList.remove("btn_selected");
                 flag = "COL";
@@ -194,7 +194,7 @@
         btn.addEventListener("click", (e) => {
             if (flag == "ROW") {
                 playground.removeAttribute = "class";
-                playground.className = "playground row"
+                playground.className = "playground r"
                 switch (e.target.innerText) {
                     case "Left":
                         console.log(e.target.innerText);
@@ -242,7 +242,7 @@
 
             else if (flag == "COL") {
                 playground.removeAttribute = "class";
-                playground.className = "playground col"
+                playground.className = "playground c"
 
                 switch (e.target.innerText) {
                     case "Left":
